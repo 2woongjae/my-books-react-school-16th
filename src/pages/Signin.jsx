@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { message } from 'antd';
-import withAuth from '../hocs/withAuth';
+import withoutAuth from '../hocs/withoutAuth';
 
 class Signin extends React.Component {
   state = {
@@ -86,4 +86,4 @@ class Signin extends React.Component {
   };
 }
 
-export default withAuth(Signin, false);
+export default withoutAuth(Signin);
