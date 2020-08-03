@@ -16,3 +16,28 @@ export function endLoading() {
     type: END_LOADING,
   };
 }
+
+// books
+export const START_GET_BOOKS = 'START_GET_BOOKS';
+export const SUCCESS_GET_BOOKS = 'SUCCESS_GET_BOOKS';
+export const FAIL_GET_BOOKS = 'FAIL_GET_BOOKS';
+
+export function startGetBooks() {
+  return {
+    type: START_GET_BOOKS,
+  };
+}
+
+export function successGetBooks(books) {
+  return {
+    type: SUCCESS_GET_BOOKS,
+    books,
+  };
+}
+
+export function failGetBooks(error) {
+  return {
+    type: FAIL_GET_BOOKS,
+    error,
+  };
+}

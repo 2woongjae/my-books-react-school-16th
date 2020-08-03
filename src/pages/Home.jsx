@@ -14,7 +14,7 @@ class Home extends React.Component {
     error: null,
   };
   render() {
-    return <BookListContainer />;
+    return <BookListContainer token={this.props.token} />;
     /*
     return (
       <div>
@@ -65,11 +65,3 @@ class Home extends React.Component {
 }
 
 export default withAuth(Home);
-
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, ms);
-  });
-}
