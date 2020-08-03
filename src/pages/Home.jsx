@@ -4,6 +4,7 @@ import axios from 'axios';
 import Counter from '../components/Counter';
 import Example9 from '../components/Example9';
 import PersonContext from '../context/PersonContext';
+import BookListContainer from '../containers/BookListContainer';
 
 class Home extends React.Component {
   static contextType = PersonContext;
@@ -13,6 +14,8 @@ class Home extends React.Component {
     error: null,
   };
   render() {
+    return <BookListContainer />;
+    /*
     return (
       <div>
         <h1>Home</h1>
@@ -25,6 +28,7 @@ class Home extends React.Component {
         <p>{JSON.stringify(this.context)}</p>
       </div>
     );
+    */
   }
 
   async componentDidMount() {
