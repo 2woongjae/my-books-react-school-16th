@@ -1,13 +1,16 @@
 import React from 'react';
 
 // Presentational Component
-export default function BookList({ books, loading, error, getBooks }) {
+export default function BookList({ books, loading, error, getBooks, logout }) {
   React.useEffect(() => {
     getBooks();
   }, [getBooks]);
   return (
     <div>
       <h1>BookList</h1>
+      <h3>
+        <button onClick={logout}>로그 아웃</button>
+      </h3>
       <p>
         <button onClick={reload}>Reload</button>
       </p>

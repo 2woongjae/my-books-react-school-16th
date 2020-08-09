@@ -5,8 +5,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import store from './store';
+import create from './redux/create';
 import { Provider } from 'react-redux';
+
+// 초기화 시점
+const store = create();
 
 ReactDOM.render(
   <Provider store={store}>
